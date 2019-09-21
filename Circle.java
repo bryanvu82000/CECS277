@@ -15,7 +15,9 @@ public class Circle extends GeometricObject{
 	Circle(double x, double y, double Radius){
 		this.location.XCoordinate = x; 
 		this.location.YCoordinate = y;
-		this.radius = Radius; 
+		if (Radius > 0){
+		this.radius = Radius;
+		} 
 	}
 	
 	public double getRadius() {
