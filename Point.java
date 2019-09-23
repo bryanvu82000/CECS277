@@ -1,34 +1,46 @@
 package ipi;
+import java.lang.Math;
 
 /**
-rectangles are defined by 1 point, all other parts can be determined by width and height
-Width (must be > 0) /
-Length (must be > 0) //take absolute value 
-**/
-public class Rectangle extends GeometricObject{
-private double Width;
-private double Length; //height 
+ * Point is a point in space that contains a X and Y coordinate. 
+ * @author williamgusmanov
+ * 
+ */
+public class Point {
 
-public setWidth(double width){
-	this.Width = width; 
+double XCoordinate;
+double YCoordinate;
+
+public Point(double xCoordinate, double yCoordinate) {
+	super();
+	XCoordinate = xCoordinate;
+	YCoordinate = yCoordinate;
 }
-public getWidth(){
-	return this.width;
+public double getXCoordinate() {
+	return XCoordinate;
 }
-public setLength(double length){
-	this.Length = length;
+public void setXCoordinate(int xCoordinate) {
+	XCoordinate = xCoordinate;
 }
-public getLength(){
-	return this.Length;
+public double getYCoordinate() {
+	return YCoordinate;
 }
-public double Area(){
-	return this.getWidth() * this.getLength();
+public void setYCoordinate(int yCoordinate) {
+	YCoordinate = yCoordinate;
 }
-public double Perimeter(){
-	return 2*this.getWidth() + 2*this.getLength(); 
+/**
+ //distance between Current Point and point 
+ * @param point, 2nd point to compare to
+ * @return distance via distance formula: square root of (x2 - x1)^2 + (y2-y1)^2) 
+ */
+public double distance(Point point) {
+	double differenceX = this.getXCoordinate() - point.getXCoordinate();
+	double differenceY = this.getYCoordinate() - point.getYCoordinate();
+	return Math.sqrt(Math.pow(differenceX, 2) + Math.pow(differenceY, 2));
+	
 }
-public String toString(){
-	return "Width: " + this.getWidth() + "\nLength: " + this.getLength
-	+ "\nUpperLeft point: (" + this.location.getXcoordinate() + "," + this.location.getYcoordinate()+")";
+@Override
+public String toString() {
+	return "(" + this.getXCoordinate() + "," + this.getYCoordinate()+")"; 
 }
 }
