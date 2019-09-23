@@ -19,10 +19,10 @@ public interface GeometricObjectInterface {
 	
 	//METHODS
 	//Area()
-	public void Area();
+	public double Area();
 	
 	//Perimeter()
-	public void Perimeter();
+	public double Perimeter();
 	
 	//toString()
 	public String toString(); 

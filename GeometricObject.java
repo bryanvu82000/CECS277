@@ -1,13 +1,13 @@
 package ipi;
 
 public abstract class GeometricObject implements GeometricObjectInterface {
-	Point location = new Point(); 
+	Point location; 
 	//Area()
-	abstract double Area();
+	public abstract double Area();
 
 	//Perimeter()
-	abstract double Perimeter();
+	public abstract double Perimeter();
 
 	//toString()
-	abstract String toString();
+	public abstract String toString();
 }
