@@ -1,9 +1,12 @@
 package ipi;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 public abstract class GeometricObject implements GeometricObjectInterface {
 	Point location = new Point(); 
 =======
+=======
+>>>>>>> Stashed changes
 public abstract class GeometricObject implements GeometricObjectInterface,Comparable <GeometricObject> {
 	Point location; 
 >>>>>>> Stashed changes
@@ -37,5 +40,9 @@ public abstract class GeometricObject implements GeometricObjectInterface,Compar
 				return two;
 			}
 	}
+<<<<<<< Updated upstream
+}
+>>>>>>> Stashed changes
+=======
 }
 >>>>>>> Stashed changes
