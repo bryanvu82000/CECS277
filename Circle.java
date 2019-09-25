@@ -8,16 +8,18 @@ import java.lang.Math;
 public class Circle extends GeometricObject{
 	double radius;
 	
-	Circle(double x, double y){
-		this.location.XCoordinate = x; 
-		this.location.YCoordinate = y;
+	Circle(double x, double y,double xCoordinate, double YCoordinate){
+		//this.location.XCoordinate = x; 
+		//this.location.YCoordinate = y;
+		this.location = new Point (x,y);
 	}
 	Circle(double x, double y, double Radius){
-		this.location.XCoordinate = x; 
-		this.location.YCoordinate = y;
+		//this.location.XCoordinate = x; 
+		//this.location.YCoordinate = y;
 		if (Radius > 0){
 		this.radius = Radius;
 		} 
+		this.location = new Point (x,y);
 	}
 	
 	public double getRadius() {

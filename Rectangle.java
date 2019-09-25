@@ -9,6 +9,13 @@ public class Rectangle extends GeometricObject{
 private double Width;
 private double Length; //height 
 
+public Rectangle(double Width, double Length, double xCoordinate, double yCoordinate) {
+	this.Width = Width;
+	this.Length = Length;
+	this.location = new Point (xCoordinate, yCoordinate);
+	
+}
+
 public void setWidth(double width){
 	this.Width = width; 
 }

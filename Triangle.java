@@ -2,12 +2,24 @@ package ipi;
 import java.lang.Math;
 
 public class Triangle extends GeometricObject{
+
 Point location2;
 Point location3;
 
-private double lengthAB = this.location.distance(location2);
-private double lengthBC = this.location2.distance(location3);
-private double lengthCA = this.location3.distance(location);
+private double lengthAB;
+private double lengthBC;
+private double lengthCA;
+
+public Triangle(double XA, double YA, double XB, double YB, double XC, double YC) {
+	this.location = new Point (XA,YA);
+	this.location2 = new Point (XB,YB);
+	this.location3 = new Point (XC, YC);
+	
+	lengthAB = this.location.distance(location2);
+	lengthBC = this.location2.distance(location3);
+	lengthCA = this.location3.distance(location);
+//this.location = new Point (xCoordinate, yCoordinate);
+}
 
 public double getLengthAB() {
 	return lengthAB;
