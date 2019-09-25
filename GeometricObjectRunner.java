@@ -1,7 +1,11 @@
 package ipi;
 
 import java.util.Arrays;
-
+/**
+ * 
+ * @author william Gusmanov, Bryan Vu 
+ * 
+ */
 public class GeometricObjectRunner {
 
 	public static void main(String[] args) {
@@ -9,7 +13,7 @@ public class GeometricObjectRunner {
 		
 		Rectangle one = new Rectangle (50,50,1,1);
 		Triangle two = new Triangle (0,0,10,0,0,10);
-		Circle three = new Circle (30,30,1,1);
+		Circle three = new Circle (0,0,15);
 		
 		testArray[0] = one;
 		testArray[1] = two;
@@ -17,13 +21,13 @@ public class GeometricObjectRunner {
 		
 		//unsorted array 
 		for (int i = 0; i < testArray.length; i++) {
-			System.out.println(i + "\n"+ testArray[i]);
+			System.out.println("i: "+ i + "\n"+ "to String: " + testArray[i]);
 		}
 		
 		Arrays.parallelSort(testArray);
 		
 		//sorted array 
-		
+		System.out.println("\nprinting sorted array:");
 		for (int i = 0; i < testArray.length; i++) {
 			System.out.println(i + "\n"+ testArray[i]);
 		}

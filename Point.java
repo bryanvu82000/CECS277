@@ -10,12 +10,17 @@ public class Point {
 
 double XCoordinate;
 double YCoordinate;
-
+/**
+ * constructor
+ * @param xCoordinate
+ * @param yCoordinate
+ */
 public Point(double xCoordinate, double yCoordinate) {
 	super();
 	XCoordinate = xCoordinate;
 	YCoordinate = yCoordinate;
 }
+
 public double getXCoordinate() {
 	return XCoordinate;
 }
@@ -40,6 +45,9 @@ public double distance(Point point) {
 	
 }
 @Override
+/**
+ * returns the x coordinate and y coordinate of the point as a string
+ */
 public String toString() {
 	return "(" + this.getXCoordinate() + "," + this.getYCoordinate()+")"; 
 }
